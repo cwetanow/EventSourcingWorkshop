@@ -1,3 +1,6 @@
+using Domain.Common;
+using Domain.Events;
+using Domain.ValueObjects;
 using FluentAssertions;
 using IntroductionToEventSourcing.AppendingEvents.Tools;
 using Marten;
@@ -5,56 +8,13 @@ using Xunit;
 
 namespace IntroductionToEventSourcing.AppendingEvents;
 
-// EVENTS
-public record ShoppingCartOpened(
-    Guid ShoppingCartId,
-    Guid ClientId
-);
-
-public record ProductItemAddedToShoppingCart(
-    Guid ShoppingCartId,
-    PricedProductItem ProductItem
-);
-
-public record ProductItemRemovedFromShoppingCart(
-    Guid ShoppingCartId,
-    PricedProductItem ProductItem
-);
-
-public record ShoppingCartConfirmed(
-    Guid ShoppingCartId,
-    DateTime ConfirmedAt
-);
-
-public record ShoppingCartCanceled(
-    Guid ShoppingCartId,
-    DateTime CanceledAt
-);
-
-// VALUE OBJECTS
-public record PricedProductItem(
-    ProductItem ProductItem,
-    decimal UnitPrice
-)
-{
-    public Guid ProductId => ProductItem.ProductId;
-    public int Quantity => ProductItem.Quantity;
-
-    public decimal TotalPrice => Quantity * UnitPrice;
-}
-
-public record ProductItem(
-    Guid ProductId,
-    int Quantity
-);
-
-
 public class GettingStateFromEventsTests
 {
-    private static Task AppendEvents(IDocumentSession documentSession, Guid streamId, object[] events, CancellationToken ct)
+    private static async Task AppendEvents(IDocumentSession documentSession, Guid shoppingCartId, object[] events, CancellationToken ct)
     {
         // TODO: Fill append events logic here.
-        throw new NotImplementedException();
+        documentSession.Events.Append(shoppingCartId, events);
+        await documentSession.SaveChangesAsync(ct);
     }
 
     [Fact]
@@ -65,18 +25,18 @@ public class GettingStateFromEventsTests
         var clientId = Guid.NewGuid();
         var shoesId = Guid.NewGuid();
         var tShirtId = Guid.NewGuid();
-        var twoPairsOfShoes = new PricedProductItem(new ProductItem(shoesId, 2), 100);
-        var pairOfShoes = new PricedProductItem(new ProductItem(shoesId, 1), 100);
-        var tShirt = new PricedProductItem(new ProductItem(tShirtId, 1), 50);
+        var twoPairsOfShoes = new ShoppingCartProductItem(shoesId, 100, 2);
+        var pairOfShoes = new ShoppingCartProductItem(shoesId, 100, 1);
+        var tShirt = new ShoppingCartProductItem(tShirtId, 50, 1);
 
-        var events = new object[]
+        var events = new DomainEvent[]
         {
             new ShoppingCartOpened(shoppingCartId, clientId),
-            new ProductItemAddedToShoppingCart(shoppingCartId, twoPairsOfShoes),
-            new ProductItemAddedToShoppingCart(shoppingCartId, tShirt),
-            new ProductItemRemovedFromShoppingCart(shoppingCartId, pairOfShoes),
-            new ShoppingCartConfirmed(shoppingCartId, DateTime.UtcNow),
-            new ShoppingCartCanceled(shoppingCartId, DateTime.UtcNow)
+            new ProductAddedToShoppingCart(shoppingCartId, twoPairsOfShoes),
+            new ProductAddedToShoppingCart(shoppingCartId, tShirt),
+            new ProductRemovedFromShoppingCart(shoppingCartId, pairOfShoes),
+            new ShoppingCartConfirmed(shoppingCartId),
+            new ShoppingCartCancelled(shoppingCartId)
         };
 
         const string connectionString =
