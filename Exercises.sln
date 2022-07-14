@@ -1,26 +1,29 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01-EventsDefinition", "01-EventsDefinition\01-EventsDefinition.csproj", "{6FECB845-9416-44A0-B18E-F526474B3130}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01-EventsDefinition", "01-EventsDefinition\01-EventsDefinition.csproj", "{6FECB845-9416-44A0-B18E-F526474B3130}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02-GettingStateFromEvents", "02-GettingStateFromEvents\02-GettingStateFromEvents.csproj", "{E982BD11-0550-44A0-BD8B-71FFE8837869}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02-GettingStateFromEvents", "02-GettingStateFromEvents\02-GettingStateFromEvents.csproj", "{E982BD11-0550-44A0-BD8B-71FFE8837869}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03-AppendingEvents.Marten", "03-AppendingEvents.Marten\03-AppendingEvents.Marten.csproj", "{95CB183E-DC20-4AA4-9F3C-313915E3AE70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03-AppendingEvents.Marten", "03-AppendingEvents.Marten\03-AppendingEvents.Marten.csproj", "{95CB183E-DC20-4AA4-9F3C-313915E3AE70}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04-AppendingEvents.EventStoreDB", "04-AppendingEvents.EventStoreDB\04-AppendingEvents.EventStoreDB.csproj", "{23D059F0-765C-4440-9148-5D063598473C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04-AppendingEvents.EventStoreDB", "04-AppendingEvents.EventStoreDB\04-AppendingEvents.EventStoreDB.csproj", "{23D059F0-765C-4440-9148-5D063598473C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05-GettingStateFromEvents.Marten", "05-GettingStateFromEvents.Marten\05-GettingStateFromEvents.Marten.csproj", "{378F4894-1D4D-4717-BB69-2C1D8E897246}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05-GettingStateFromEvents.Marten", "05-GettingStateFromEvents.Marten\05-GettingStateFromEvents.Marten.csproj", "{378F4894-1D4D-4717-BB69-2C1D8E897246}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06-GettingStateFromEvents.EventStoreDB", "06-GettingStateFromEvents.EventStoreDB\06-GettingStateFromEvents.EventStoreDB.csproj", "{887D0122-F9FC-463B-B887-730E612E9CDB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06-GettingStateFromEvents.EventStoreDB", "06-GettingStateFromEvents.EventStoreDB\06-GettingStateFromEvents.EventStoreDB.csproj", "{887D0122-F9FC-463B-B887-730E612E9CDB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07-BusinessLogic", "07-BusinessLogic\07-BusinessLogic.csproj", "{72CA8C3A-512F-4128-A65F-EEE4B0831D6D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07-BusinessLogic", "07-BusinessLogic\07-BusinessLogic.csproj", "{72CA8C3A-512F-4128-A65F-EEE4B0831D6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08-BusinessLogic.Marten", "08-BusinessLogic.Marten\08-BusinessLogic.Marten.csproj", "{F8CBBFE9-C757-4605-9721-9C3B99E43B58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08-BusinessLogic.Marten", "08-BusinessLogic.Marten\08-BusinessLogic.Marten.csproj", "{F8CBBFE9-C757-4605-9721-9C3B99E43B58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09-BusinessLogic.EventStoreDB", "09-BusinessLogic.EventStoreDB\09-BusinessLogic.EventStoreDB.csproj", "{565DA7F7-9530-43AC-B589-79909C929166}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "09-BusinessLogic.EventStoreDB", "09-BusinessLogic.EventStoreDB\09-BusinessLogic.EventStoreDB.csproj", "{565DA7F7-9530-43AC-B589-79909C929166}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10-OptimisticConcurrency.Marten", "10-OptimisticConcurrency.Marten\10-OptimisticConcurrency.Marten.csproj", "{84C818FE-C9AF-4A99-AACC-6F549552EDFA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10-OptimisticConcurrency.Marten", "10-OptimisticConcurrency.Marten\10-OptimisticConcurrency.Marten.csproj", "{84C818FE-C9AF-4A99-AACC-6F549552EDFA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11-OptimisticConcurrency.EventStoreDB", "11-OptimisticConcurrency.EventStoreDB\11-OptimisticConcurrency.EventStoreDB.csproj", "{BFD5FB88-431B-4759-87CB-C982CB81197A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11-OptimisticConcurrency.EventStoreDB", "11-OptimisticConcurrency.EventStoreDB\11-OptimisticConcurrency.EventStoreDB.csproj", "{BFD5FB88-431B-4759-87CB-C982CB81197A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{C07EC023-0515-4734-B6CB-18775FB97063}"
 	ProjectSection(SolutionItems) = preProject
@@ -32,11 +35,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docker", "docker", "{2BDFA6
 		docker-compose.yml = docker-compose.yml
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12-Projections.SingleStream", "12-Projections.SingleStream\12-Projections.SingleStream.csproj", "{9829BFD1-CC7D-45E1-9CAB-E33A6E756B19}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12-Projections.SingleStream", "12-Projections.SingleStream\12-Projections.SingleStream.csproj", "{9829BFD1-CC7D-45E1-9CAB-E33A6E756B19}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13-Projections.SingleStream.Idempotency", "13-Projections.SingleStream.Idempotency\13-Projections.SingleStream.Idempotency.csproj", "{74319775-B137-42AC-9705-7D3F0B08EB5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "13-Projections.SingleStream.Idempotency", "13-Projections.SingleStream.Idempotency\13-Projections.SingleStream.Idempotency.csproj", "{74319775-B137-42AC-9705-7D3F0B08EB5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14-Projections.SingleStream.EventualConsistency", "14-Projections.SingleStream.EventualConsistency\14-Projections.SingleStream.EventualConsistency.csproj", "{4F4B6653-10F2-4D96-8465-AD39F54EE597}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "14-Projections.SingleStream.EventualConsistency", "14-Projections.SingleStream.EventualConsistency\14-Projections.SingleStream.EventualConsistency.csproj", "{4F4B6653-10F2-4D96-8465-AD39F54EE597}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{A650AF5A-84C4-46B2-843B-9E57CDE0F20C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -100,5 +105,15 @@ Global
 		{4F4B6653-10F2-4D96-8465-AD39F54EE597}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F4B6653-10F2-4D96-8465-AD39F54EE597}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F4B6653-10F2-4D96-8465-AD39F54EE597}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A650AF5A-84C4-46B2-843B-9E57CDE0F20C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A650AF5A-84C4-46B2-843B-9E57CDE0F20C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A650AF5A-84C4-46B2-843B-9E57CDE0F20C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A650AF5A-84C4-46B2-843B-9E57CDE0F20C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F4B3EAD1-C2F7-49A0-8D00-C4A24899863F}
 	EndGlobalSection
 EndGlobal
