@@ -16,14 +16,14 @@ public class EventsDefinitionTests
         var shoppingCardId = Guid.NewGuid();
         var customerId = Guid.NewGuid();
 
-        var product = new ProductItem(Guid.NewGuid(), 7.66m);
+        var product = new ShoppingCartProductItem(Guid.NewGuid(), 7.66m, 4);
 
         var events = new object[]
         {
             // 2. Put your sample events here
             new ShoppingCartOpened(shoppingCardId,customerId),
-            new ProductAddedToShoppingCart(shoppingCardId,product,4),
-            new ProductRemovedFromShoppingCart(shoppingCardId,product.Id),
+            new ProductAddedToShoppingCart(shoppingCardId,product),
+            new ProductRemovedFromShoppingCart(shoppingCardId,product),
             new ShoppingCartConfirmed(shoppingCardId),
             new ShoppingCartCancelled(shoppingCardId),
         };
