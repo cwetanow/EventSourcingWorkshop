@@ -41,7 +41,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "13-Projections.SingleStream
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "14-Projections.SingleStream.EventualConsistency", "14-Projections.SingleStream.EventualConsistency\14-Projections.SingleStream.EventualConsistency.csproj", "{4F4B6653-10F2-4D96-8465-AD39F54EE597}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{A650AF5A-84C4-46B2-843B-9E57CDE0F20C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{A650AF5A-84C4-46B2-843B-9E57CDE0F20C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

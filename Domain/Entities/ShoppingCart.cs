@@ -8,7 +8,7 @@ namespace Domain.Entities
     {
         Pending = 1,
         Confirmed = 2,
-        Canceled = 4
+        Cancelled = 4
     }
 
     public class ShoppingCart : Entity
@@ -46,7 +46,7 @@ namespace Domain.Entities
 
         private void Aplly(ShoppingCartCancelled _)
         {
-            Status = ShoppingCartStatus.Canceled;
+            Status = ShoppingCartStatus.Cancelled;
         }
 
         private void Aplly(ShoppingCartConfirmed _)
@@ -85,7 +85,7 @@ namespace Domain.Entities
         {
             var cart = new ShoppingCart();
 
-            foreach (var ev in events.OrderBy(e => e.TimeStamp))
+            foreach (var ev in events)
             {
                 cart.When(ev);
             }
